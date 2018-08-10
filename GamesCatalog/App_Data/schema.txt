@@ -1,7 +1,16 @@
 ﻿CREATE TABLE IF NOT EXISTS games (
-id INTEGER AUTOINCREMENT NOT NULL,
-name TEXT NOT NULL,
-platform TEXT NOT NULL,
-releasedate DATETIME NOT NULL,
-cost NUMERIC NOT NULL
+	id INTEGER PRIMARY KEY AUTOINCREMENT,
+	name TEXT NOT NULL,
+	platform TEXT NOT NULL,
+	releasedate DATETIME NOT NULL,
+	cost NUMERIC NOT NULL
+
 );
+
+--INSERT INTO games (name, platform, released, cost) VALUES ("Witcher 3", "Pc Master Race", "2015-05-19", 60);
+
+INSERT OR IGNORE INTO games VALUES (1, "Witcher 3", "Pc Master Race", "2015-05-19", 60);
+INSERT OR IGNORE INTO games VALUES (2, "Destiny 2", "Pc Master Race", "2015-05-19", 60);
+INSERT OR IGNORE INTO games VALUES (3, "Skyrim", "Xbox", "2011-11-11", 49.99);
+INSERT OR IGNORE INTO games VALUES (4, "Skyrim", "Pc Master Race", "2016-06-04", 49.99);
+INSERT OR IGNORE INTO games VALUES (5, "Monster Hunter", "Pc Master Race", "2018-08-10", 59.99);
