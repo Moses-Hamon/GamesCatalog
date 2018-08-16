@@ -32,7 +32,7 @@ namespace GamesCatalog
             // this means if a user gives us poisoned SQL, it won't be executed.
             var query = "SELECT * FROM games WHERE id = @id";
 
-            // when usinga parameterised query with dapper, the convention is
+            // when using a parameterised query with dapper, the convention is
             // to package the parameters into an anonymous object
             // make the query parameters have the same name as the variables with their date
             // eg, id is @id because it will be sourced from the if method argument.

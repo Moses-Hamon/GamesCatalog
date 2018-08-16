@@ -62,7 +62,7 @@
                 <asp:TextBox ID="txtSelected" runat="server" CssClass="form-control" />
             </div>
 
-            <asp:Button ID="btnLoad" runat="server" Text="Load" CssClass="btn" OnClick="btnLoad_Click" />
+            <asp:Button ID="btnLoad" runat="server" Text="Load" CssClass="btn text-dark" OnClick="btnLoad_Click" />
             <asp:Button ID="btnSave" runat="server" Text="Save" CssClass="btn" OnClick="btnSave_Click" />
             <asp:Button ID="btnClear" runat="server" Text="Clear" CssClass="btn" OnClick="btnClear_Click" />
 

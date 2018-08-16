@@ -11,11 +11,27 @@ namespace GamesCatalog
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         protected void btnLoad_Click(object sender, EventArgs e)
         {
+            var id = txtSelected.Text;
+            while (id != null || id != "")
+            {
+                try
+                {
+                    var game = Game.SelectOne(id);
+                    updateFields(game);
+                    
+                    
+                }
+                catch (Exception)
+                {
+
+                    throw;
+                }
+            }
             // use txtSelectID to get the id of a record
             // use Game.SelectOne to load that record
             // copy the data from that record onto the form
@@ -36,6 +52,14 @@ namespace GamesCatalog
             txtName.Text = "";
             txtPlatform.Text = "";
             txtReleased.Text = "";
+        }
+
+        public void updateFields(Game game)
+        {
+            txtId.Text = game.Id.ToString();
+            txtName.Text = game.Name.ToString();
+            txtPlatform.Text = game.Platform.ToString();
+            txtReleased.Text = game.Released.ToString();
         }
     }
 }
